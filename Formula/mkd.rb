@@ -5,7 +5,6 @@ class Mkd < Formula
   sha256 "c15c27c64f197f67ad291c104da01f89eb7ba0ff1fe13d8a757e084053354c6a"
   license "MIT"
 
-  depends_on :macos
   depends_on arch: :arm64
 
   def install
