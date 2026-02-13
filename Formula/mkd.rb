@@ -2,7 +2,7 @@ class Mkd < Formula
   desc "Minimal macOS markdown viewer with live reload"
   homepage "https://github.com/jamesd7788/mkd"
   url "https://github.com/jamesd7788/mkd/releases/download/v0.2.0/mkd-v0.2.0-arm64.tar.gz"
-  sha256 "c15c27c64f197f67ad291c104da01f89eb7ba0ff1fe13d8a757e084053354c6a"
+  sha256 "f21f13d1e5eb023ced94afe79b6602a37e1c55ec2e3e1c44c1cd7a82a2c7a0d9"
   license "MIT"
 
   depends_on arch: :arm64
