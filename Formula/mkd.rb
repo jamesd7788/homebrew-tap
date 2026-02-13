@@ -1,18 +1,16 @@
 class Mkd < Formula
   desc "Minimal macOS markdown viewer with live reload"
   homepage "https://github.com/jamesd7788/mkd"
-  url "https://github.com/jamesd7788/mkd/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "75fd3e27f93c880f7791883d4686fbe87f953ee27c20561b9f8918f76de473a7"
+  url "https://github.com/jamesd7788/mkd/releases/download/v0.2.0/mkd-v0.2.0-arm64.tar.gz"
+  sha256 "c15c27c64f197f67ad291c104da01f89eb7ba0ff1fe13d8a757e084053354c6a"
   license "MIT"
 
-  depends_on xcode: ["15.0", :build]
   depends_on :macos
+  depends_on arch: :arm64
 
   def install
-    system "swift", "build", "-c", "release", "--disable-sandbox"
-    bin.install ".build/release/mkd"
-    # resource bundle must sit next to binary for Bundle.module to find it
-    bin.install ".build/release/mkd_mkd.bundle"
+    bin.install "mkd"
+    bin.install "mkd_mkd.bundle"
   end
 
   test do
